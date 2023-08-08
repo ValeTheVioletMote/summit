@@ -8,10 +8,12 @@ import (
 )
 
 type WorldLocation struct {
-	X, Y, Z     float32
-	Map         uint32
-	Zone        uint32
-	Orientation float32
+	X           float32 `yaml:"position_x"`
+	Y           float32 `yaml:"position_y"`
+	Z           float32 `yaml:"position_z"`
+	Map         uint32  `yaml:"position_map"`
+	Zone        uint32  `yaml:"position_zone"`
+	Orientation float32 `yaml:"position_orientation"`
 }
 
 // Location returns the X, Y, Z coordinates and map ID of a WorldLocation.
@@ -129,40 +131,41 @@ func CreatePlayer() {
 }
 
 type Player struct {
-	*object.Object
-	*object.Unit
+	*object.Object `yaml:"-"`
+	*object.Unit   `yaml:"-"`
 
-	ID     uint32
-	Name   string
-	Race   wow.PlayerRace
-	Class  wow.PlayerClass
-	Gender wow.PlayerGender
+	ID     uint32           `yaml:"id"`
+	Name   string           `yaml:"name"`
+	Race   wow.PlayerRace   `yaml:"race"`
+	Class  wow.PlayerClass  `yaml:"class"`
+	Gender wow.PlayerGender `yaml:"gender"`
 
-	Skin       uint8
-	Face       uint8
-	HairStyle  uint8
-	HairColor  uint8
-	FacialHair uint8
-	OutfitID   uint8
+	Skin       uint8 `yaml:"skin"`
+	Face       uint8 `yaml:"face"`
+	HairStyle  uint8 `yaml:"hairstyle"`
+	HairColor  uint8 `yaml:"haircolor"`
+	FacialHair uint8 `yaml:"facialhair"`
+	OutfitID   uint8 `yaml:"outfit_id"`
 
-	Location     WorldLocation
-	BindLocation WorldLocation
+	Location     WorldLocation `yaml:"location"`
+	BindLocation WorldLocation `yaml:"bind_location"`
 
-	Level uint8
+	Level uint8 `yaml:"level"`
 
-	Inventory *Inventory
-	GuildID   uint32
+	Inventory *Inventory `yaml:"inventory"`
+	GuildID   uint32     `yaml:"guild_id"`
 
 	// CharFlags for example dead, and display ghost
-	CharFlags uint32
+	CharFlags uint32 `yaml:"char_flags"`
 
 	// Recustomization flags (change name, look, etc)
 	// Needs some research
-	Recustomization uint32
+	Recustomization uint32 `yaml:"recustomization"`
 
-	FirstLogin uint8 // Boolean, but uint8 :D
+	// Boolean, but uint8 :D
+	FirstLogin uint8 `yaml:"had_first_login"`
 
-	Pet Pet
+	Pet Pet `yaml:"pet"`
 }
 
 func (p *Player) Guid() wow.GUID {
