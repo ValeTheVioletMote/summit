@@ -41,7 +41,7 @@ Developers:
 - **(Founder)** [Paál Gyula](https://github.com/paalgyula)
 - (Jr) [Vale the Violet Mote](https://github.com/ValeTheVioletMote)
 
-This project is a one man band (because when i'm writing these lines the project is just 3days old). I have an architecture in my head how this tiny project will change the 🗺 and I'll document it soon to here, but feel free to fork this repository and have fun. 
+I have an architecture in my head how this tiny project will change the 🗺 and I'll document it here soon, but feel free to fork this repository and have fun. 
 
 I'm got some existing parts from emulators:
 - [Azeroth Core](https://github.com/azerothcore/azerothcore-wotlk) - Opcodes
