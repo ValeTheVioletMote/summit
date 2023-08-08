@@ -38,7 +38,7 @@ The DBC stuff? Hmm... I have an idea to load the dbc in a different way than bef
 
 Developers:
 
-- **(Founder)** [Paál Gyula](https://github.com/paalgyula)
+- **(Creator)** [Paál Gyula](https://github.com/paalgyula)
 - (Jr) [Vale the Violet Mote](https://github.com/ValeTheVioletMote)
 
 I have an architecture in my head how this tiny project will change the 🗺 and I'll document it here soon, but feel free to fork this repository and have fun. 
